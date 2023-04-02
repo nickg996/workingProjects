@@ -1,0 +1,22 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "RPS kata",
+  "main": "main.ts",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
+    "@types/jest": "^29.5.0",
+    "babel-jest": "^29.5.0",
+    "ts-jest": "^29.0.5"
+  }
+}
