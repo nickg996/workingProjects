@@ -1,23 +1,29 @@
-export const rockPaperScissors = (player1: string, player2: string) => {
-  if (typeof player1 != "string" || typeof player2 != "string") {
-    return "Invalid type entered: You must enter a string with a value of rock, paper or scissors.";
-  } else if (player1 === "paper" && player2 === "rock") {
+export enum Move {
+  paper,
+  rock,
+  scissors
+}
+
+export const rockPaperScissors = (player1: Move, player2: Move) => {
+  if (player1 === Move.paper && player2 === Move.rock) {
     return "player one wins";
-  } else if (player1 === "paper" && player2 === "scissors") {
+  } else if (player1 === Move.paper && player2 === Move.scissors) {
     return "player one loses";
-  } else if (player1 === "paper" && player2 === "paper") {
+  } else if (player1 === Move.paper && player2 === Move.scissors) {
     return "tie";
-  } else if (player1 === "rock" && player2 === "scissors") {
-    return "player one wins";
-  } else if (player1 === "rock" && player2 === "paper") {
-    return "player one loses";
-  } else if (player1 === "rock" && player2 === "rock") {
+  } else if (player1 === Move.paper && player2 === Move.paper) {
     return "tie";
-  } else if (player1 === "scissors" && player2 === "paper") {
+  } else if (player1 === Move.rock && player2 === Move.scissors) {
     return "player one wins";
-  } else if (player1 === "scissors" && player2 === "rock") {
+  } else if (player1 === Move.rock && player2 === Move.paper) {
     return "player one loses";
-  } else if (player1 === "scissors" && player2 === "scissors") {
+  } else if (player1 === Move.rock && player2 === Move.rock) {
+    return "tie";
+  } else if (player1 === Move.scissors && player2 === Move.paper) {
+    return "player one wins";
+  } else if (player1 === Move.scissors && player2 === Move.rock) {
+    return "player one loses";
+  } else if (player1 === Move.scissors && player2 === Move.scissors) {
     return "tie";
   } else {
     return "Invalid turn: You must pick rock, paper or scissors.";
